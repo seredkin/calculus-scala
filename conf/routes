@@ -1,0 +1,1 @@
+GET      /calculus           controllers.Application.calculus(query: Option[String])
