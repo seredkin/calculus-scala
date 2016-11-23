@@ -1,0 +1,14 @@
+.idea
+.idea_modules
+.sbtserver
+*.lock
+*.ipr
+*.iml
+app-2.10
+logs
+project/target
+project/project
+projectFilesBackup
+public
+target
+test
