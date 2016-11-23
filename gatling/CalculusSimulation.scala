@@ -20,12 +20,9 @@ class CalculusSimulation extends Simulation {
 		"Upgrade-Insecure-Requests" -> "1")
 
 
+	val calc01 = repeat(100){ exec(http("request_0").get("/calculus?query=MiAqICgyMy8oMyozKSktIDIzICogKDIqMyk="))}
 
-	val scn = scenario("CalculusSimulation")
-		exec(http("request_0")
-			.get("/calculus?query=MiAqICgyMy8oMyozKSktIDIzICogKDIqMyk=")
-			))
+	val scn = scenario("CalculusSimulation").exec(calc01)
 
 	setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
 }
-
